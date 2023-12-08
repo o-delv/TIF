@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="gimnasio,repuestos,fabricantes,aparatos,ejercicio,polea,regaton,tope">
+        <meta name="description" content="venta de repuestos para aparatos de gimnasios">
+        <link rel="shortcut icon" href="../img/LOGOpng.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/cabecera.css">
+        <link rel="stylesheet" href="../css/consulta.css">
+        <link rel="stylesheet" href="../css/piedepagina.css">
+         <script src="../js/contacto.js" defer></script>
+        <title>Contacto</title>
+    </head>
+
+<body>
+    <header id="header"></header>
+
+
+    <main>
+        <section class="principal">
+        <img src="../img/portada_powerfull.png" alt="powerfull">
+    </section>
+        <section>
+            <form action="https://formspree.io/f/xyyqogea" method="post">
+                <h4>Formulario para envio de consulta</h4>
+                <input class="control" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+                <input class="control" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido"
+                    required>
+                <input class="control" type="email" name="correo" id="correo"
+                    placeholder="Ingrese su correo electronico" required>
+                <textarea class="comentario" name="comentario" id="comentario" cols="30" rows="10"
+                    placeholder="Escriba su consulta"></textarea>
+                <input class="boton" type="submit" value="Enviar consulta">
+                
+                <p>Se le enviara un correo al encargado para su revision</p>
+            </form>
+        </section>
+    </main>
+
+
+<footer>
+        <a href="https://www.instagram.com/fitnesspowerfullpfgalvan/" target="_blank" rel="noopener" title="instagram"><img  class="iconred" src="../img/instagram.png" alt=""></a>
+        <a href="https://www.facebook.com/diego.accesori" target="_blank" rel="noopener" title="facebook"><img class="iconred" src="../img/facebook.png" alt=""></a>
+        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener" title="whatsapp"><img id="iconred" src="../img/whatsapp.png" alt=""></a>
+    </footer>
+
+     <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var correo = document.getElementById("correo").value;
+            var comentario = document.getElementById("comentario").value;
+
+            if (nombre.trim() === "") {
+                alert("Por favor, ingrese su nombre.");
+                return false;
+            }
+
+            if (apellido.trim() === "") {
+                alert("Por favor, ingrese su apellido.");
+                return false;
+            }
+
+            if (correo.trim() === "" || !correo.includes("@")) {
+                alert("Por favor, ingrese una dirección de correo válida.");
+                return false;
+            }
+
+            if (comentario.trim() === "") {
+                alert("Por favor, escriba su consulta o comentario.");
+                return false;
+            }
+
+            return true;
+        }
+
+        var formulario = document.querySelector("form");
+        formulario.addEventListener("submit", function (event) {
+            if (!validarFormulario()) {
+                event.preventDefault();
+            }
+        });
+    </script>
+    <script src="../js/header.js"></script>
+</body>
+</html>

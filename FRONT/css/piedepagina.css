@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    background: linear-gradient(to top, rgb(229, 177, 177), rgba(58, 1, 52, 0.999));
+    max-height: 24vh;
+    justify-content: center;
+    padding-top: 4vh;
+    color:black;
+    position: sticky;
+    
+}
+
+footer img {
+    max-width: 6vh;
+    max-height: 6vh;
+    padding-top: 5vh;
+    vertical-align: bottom;
+    z-index: 1;
+}
+
+footer img:hover {
+    max-width: 7vh;
+    max-height: 7vh;
+}

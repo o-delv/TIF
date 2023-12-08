@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background: rgb(229, 177, 177);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 2vw;
+    text-align: center;
+    vertical-align: middle;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ingresar_pedido.css">
+    <link rel="stylesheet" href="../css/tabla_pedidos.css">
+    <link rel="stylesheet" href="../css/cabecera.css">
+    <link rel="stylesheet" href="../css/piedepagina.css">
+    <title>Registrar Pedido</title>
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+    <main>
+    
+        <section>
+            <div class="menu"><a href="tabla_pedidos.html">Ver Pedidos</a></div>
+            <div class="container-form">
+
+                <form action="">
+                    <div class="entrada">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="precio">Precio</label>
+                        <input type="number" name="precio" id="precio">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" name="cantidad" id="cantidad">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" name="direccion" id="direccion">
+                    </div>
+
+                    <div class="entrada">
+                        <button class="modificar" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="https://www.instagram.com/fitnesspowerfullpfgalvan/" target="_blank" rel="noopener"
+            title="instagram"><img class="iconred" src="../img/instagram.png" alt=""></a>
+        <a href="https://www.facebook.com/diego.accesori" target="_blank" rel="noopener" title="facebook"><img
+                class="iconred" src="../img/facebook.png" alt=""></a>
+        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener" title="whatsapp"><img id="iconred"
+                src="../img/whatsapp.png" alt=""></a>
+    </footer>
+
+    <script src="../js/ingresar_pedido.js"></script>
+    <script src="../js/header.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gimnasio,repuestos,fabricantes,aparatos,ejercicio,polea,regaton,tope">
+    <meta name="description" content="venta de repuestos para aparatos de gimnasios">
+    <link rel="shortcut icon" href="img/LOGOpng.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/destacados.css">
+    <link rel="stylesheet" href="css/piedepagina.css">
+    <title>Inicio</title>
+    <script src="/js/destacados.js" defer></script>
+</head>
+
+<body>
+
+
+    <header id="contenedor">
+        <section class="negro">
+            <span class="logotel"><img src="img/logotelefono.png" alt="">4641 1234</span>
+            <span class="logotel center"><img src="img/logocelular.png" alt="">15 5412 5853</span>
+            <span class="logotel"><img src="img/logosobre.png" alt="">ventas@powerfiness.com</span>
+
+        </section>
+
+        <div id="logobar">
+            <img id="logo" src="img/LOGOpng.png" alt="">
+
+            <nav class="barra">
+                <a href="index.html">Inicio</a>
+                <a href="#Destacados">Destacados</a>
+                <a href="templates/productos.html">Productos</a>
+                <a href="templates/videos.html">Videos</a>
+                <a href="templates/contacto.html">Contacto</a>
+                <a href="templates/ingresar_pedido.html">Pedidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="principal">
+        <img src="img/portada_powerfull.png" alt="powerfull">
+    </section>
+
+
+    <main>
+        <section>
+            <h1 id="Destacados">Productos Destacados</h1>
+        </section>
+        <section>
+            <div class="carousel">
+                <div class="carousel__item"><img
+                        src="img/Productos/Destacados/169596343_2879957045605023_6524598566811997529_n.jpg" alt="">
+                </div>
+                <div class="carousel__item"><img
+                        src="img/Productos/Destacados/170033323_2880599262207468_519013743075258105_n.jpg" alt=""></div>
+                <div class="carousel__item"><img
+                        src="img/Productos/Destacados/182359030_2900814160185978_6430061572021956635_n.jpg" alt="">
+                </div>
+                <div class="carousel__item"><img
+                        src="img/Productos/Destacados/93263979_2583708691896528_6543815092763361280_n.jpg" alt=""></div>
+            </div>
+        </section>
+        <section class="api-temp">
+            <h2>Temperatura en Buenos Aires</h2>
+            <div id="info-clima">
+                <p><span id="temperatura"></span>°C</p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        const apiKey = "882ff251d55ba64e6d24508ffc485e0f";
+        const city = "Buenos Aires";
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+        async function getWeatherData() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                const temperatura = data.main.temp;
+
+                document.getElementById("temperatura").textContent = temperatura;
+            } catch (error) {
+                console.error("Error al obtener los datos del clima: ", error);
+            }
+        }
+
+        window.onload = getWeatherData;
+    </script>
+
+    <footer>
+        <a href="https://www.instagram.com/fitnesspowerfullpfgalvan/" target="_blank" rel="noopener"
+            title="instagram"><img class="iconred" src="img/instagram.png" alt=""></a>
+        <a href="https://www.facebook.com/diego.accesori" target="_blank" rel="noopener" title="facebook"><img
+                class="iconred" src="img/facebook.png" alt=""></a>
+        <a href="https://web.whatsapp.com/" target="_blank" rel="noopener" title="whatsapp"><img id="iconred"
+                src="img/whatsapp.png" alt=""></a>
+    </footer>
+</body>
+
+</html>
